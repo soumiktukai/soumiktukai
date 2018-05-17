@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="38544" started-at="2018-05-16T11:35:21Z" finished-at="2018-05-16T11:36:00Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="38544" started-at="2018-05-16T11:35:21Z" finished-at="2018-05-16T11:36:00Z">
+      <class name="com.magento.qa.testcases.LoginTest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.magento.qa.testcases.LoginTest@b7dd107]" name="SetUp" is-config="true" duration-ms="10411" started-at="2018-05-16T11:35:21Z" finished-at="2018-05-16T11:35:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="PageTitleTest()[pri:1, instance:com.magento.qa.testcases.LoginTest@b7dd107]" name="PageTitleTest" duration-ms="15" started-at="2018-05-16T11:35:31Z" finished-at="2018-05-16T11:35:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PageTitleTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.magento.qa.testcases.LoginTest@b7dd107]" name="teardown" is-config="true" duration-ms="692" started-at="2018-05-16T11:35:32Z" finished-at="2018-05-16T11:35:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.magento.qa.testcases.LoginTest@b7dd107]" name="SetUp" is-config="true" duration-ms="7672" started-at="2018-05-16T11:35:32Z" finished-at="2018-05-16T11:35:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="ValidateMagentoImage()[pri:2, instance:com.magento.qa.testcases.LoginTest@b7dd107]" name="ValidateMagentoImage" duration-ms="38" started-at="2018-05-16T11:35:40Z" finished-at="2018-05-16T11:35:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateMagentoImage -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.magento.qa.testcases.LoginTest@b7dd107]" name="teardown" is-config="true" duration-ms="691" started-at="2018-05-16T11:35:40Z" finished-at="2018-05-16T11:35:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.magento.qa.testcases.LoginTest@b7dd107]" name="SetUp" is-config="true" duration-ms="8107" started-at="2018-05-16T11:35:41Z" finished-at="2018-05-16T11:35:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="Logintest()[pri:3, instance:com.magento.qa.testcases.LoginTest@b7dd107]" name="Logintest" duration-ms="10036" started-at="2018-05-16T11:35:49Z" finished-at="2018-05-16T11:35:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logintest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.magento.qa.testcases.LoginTest@b7dd107]" name="teardown" is-config="true" duration-ms="858" started-at="2018-05-16T11:35:59Z" finished-at="2018-05-16T11:36:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.magento.qa.testcases.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

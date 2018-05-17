@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="un" value="admin"/>
+    <parameter name="pwd" value="shreya@2016"/>
+    <classes>
+      <class name="com.magento.qa.testcases.LoginTest">
+        <methods>
+          <include name="PageTitleTest"/>
+          <include name="ValidateMagentoImage"/>
+          <include name="Logintest"/>
+          <include name="teardown"/>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- com.magento.qa.testcases.LoginTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
