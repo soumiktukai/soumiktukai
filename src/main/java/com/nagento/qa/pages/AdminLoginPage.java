@@ -27,6 +27,8 @@ public class AdminLoginPage extends TestBase {
 	WebElement VerifyLogo;
 	
 	
+	
+	
 	//initializing the page object
 	public AdminLoginPage() {
 		
