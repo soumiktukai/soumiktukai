@@ -58,47 +58,16 @@ public class PriceListPage {
 	@FindBy(xpath="//button[@id='saveandcontinue' and @title='Save and Continue Edit']")
 	WebElement Save_button;
 	
-	//Create method for pricelistdropdown
-	
-	public void PriceListDDvalue(){
-	
-	Select PricelistDropdownbtn = new Select(ParentpricelistDropButton);
-	
-    //before select dropdown it should return baseprice
-	WebElement selcted_values =  PricelistDropdownbtn.getFirstSelectedOption();
-	
-	System.out.println("before selection dropdown values =" +selcted_values.getText());
+	@FindBy(name="test_tab")
+	WebElement ProductDetails;
 	
 	
-	PricelistDropdownbtn.selectByValue("1");
+	@FindBy(xpath="//button[@class=\"action-default scalable action-reset action-tertiary\"]")
+	WebElement ResetFilter;
 	
-	//after select pricelist it should return Automation
+
 	
-	WebElement selcted_values1 =  PricelistDropdownbtn.getFirstSelectedOption();
 	
-	System.out.println("after selection dropdown values =" +selcted_values1.getText());
-	
-	}
-	
-	//Create method for isactive 
-	public void IsactiveDDvalue()
-	{
-		Select  isactiveddbutton = new Select(is_active);
-		 
-		
-		//before select dropdown it should return No
-		WebElement selected_DD= isactiveddbutton.getFirstSelectedOption();
-		System.out.println("before selection dropdown values =" +selected_DD.getText());
-		
-		isactiveddbutton.selectByVisibleText("Yes");
-		
-		//after  select dropdown it should return Yes
-	    WebElement selected_DD1= isactiveddbutton.getFirstSelectedOption();
-	    System.out.println("before selection dropdown values =" +selected_DD1.getText());
-		
-		
-		
-	}	
 	
 	
 	//initializing the page object
@@ -155,7 +124,7 @@ public class PriceListPage {
     		
     		//before select dropdown it should return No
     		WebElement Choos_DD= WebsiteDropdown.getFirstSelectedOption();
-    		System.out.println("before selection dropdown values =" +Choos_DD.getText());
+    		 System.out.println("before selection dropdown values =" +Choos_DD.getText());
     		
     		WebsiteDropdown.selectByVisibleText("Main Website");
     		
@@ -168,6 +137,69 @@ public class PriceListPage {
         
         public void PriceListName() {
         	
-        	PricelistName.sendKeys("Test1");
+        	PricelistName.sendKeys("test1");
         }
+        
+        
+    	//Create method for pricelistdropdown
+    	
+    	public void PriceListDDvalue(){
+    	
+    	Select PricelistDropdownbtn = new Select(ParentpricelistDropButton);
+    	
+        //before select dropdown it should return baseprice
+    	WebElement selcted_values =  PricelistDropdownbtn.getFirstSelectedOption();
+    	
+    	System.out.println("before selection dropdown values =" +selcted_values.getText());
+    	
+    	
+    	PricelistDropdownbtn.selectByValue("1");
+    	
+    	//after select pricelist it should return Automation
+    	
+    	WebElement selcted_values1 =  PricelistDropdownbtn.getFirstSelectedOption();
+    	
+    	System.out.println("after selection dropdown values =" +selcted_values1.getText());
+    	
+    	}
+    	
+    	public void discountpercent() {
+    		
+    		discountfactor.sendKeys("10");
+    	}
+    	
+    	//Create method for isactive 
+    	public void IsactiveDDvalue()
+    	{
+    		Select  isactiveddbutton = new Select(is_active);
+    		 
+    		
+    		//before select dropdown it should return No
+    		WebElement selected_DD= isactiveddbutton.getFirstSelectedOption();
+    		System.out.println("before selection dropdown values =" +selected_DD.getText());
+    		
+    		isactiveddbutton.selectByVisibleText("Yes");
+    		
+    		//after  select dropdown it should return Yes
+    	    WebElement selected_DD1= isactiveddbutton.getFirstSelectedOption();
+    	    System.out.println("before selection dropdown values =" +selected_DD1.getText());
+    		
+    		
+    		
+    	}
+    	
+    	
+    	public void clicksaveandContinue() {
+    		
+    		Save_button.click();
+    	} 
+    	
+    	//Click on product details for assign
+    	
+    	public void clickprodDetails() {
+    		
+    		ProductDetails.click();
+    	}
+    	// click on reset filter
+    	
 }
