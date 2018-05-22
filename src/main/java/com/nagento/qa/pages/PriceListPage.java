@@ -14,17 +14,11 @@ public class PriceListPage {
 	//Pagefactory--OR
 	
 	
-	@FindBy(xpath="//li[@id='menu-magento-backend-dashboard' and @role='menu-item']")
-	WebElement ManueDashboardButton;
 	
-	@FindBy(xpath="//h1[@class='page-title']")
-	WebElement Dashboard;
 	
-	@FindBy(xpath="//li[@id='menu-insync-pricelist-advanced-pricing']/a/span")
-	WebElement AdvancePricing;
 	
-	@FindBy(xpath="//li[@class='item-pricelist-manage    level-1']/a")
-	WebElement PriceLits;
+	
+	
 	
 	//Pricelist page logo
 	
@@ -56,7 +50,7 @@ public class PriceListPage {
 	WebElement is_active;
 	
 	@FindBy(xpath="//button[@id='saveandcontinue' and @title='Save and Continue Edit']")
-	WebElement Save_button;
+	WebElement Savecontinue_button;
 	
 	@FindBy(name="test_tab")
 	WebElement ProductDetails;
@@ -65,9 +59,23 @@ public class PriceListPage {
 	@FindBy(xpath="//button[@class=\"action-default scalable action-reset action-tertiary\"]")
 	WebElement ResetFilter;
 	
+	@FindBy(name="product_id")
+	WebElement Checkbox;
+	
+	@FindBy(xpath="//select[@id=\"ProductGrid_massaction-select\"]")
+	WebElement Actiondropdown;
 
+	@FindBy(xpath="//button[@id=\"save\"]")
+	WebElement Save;
 	
+	@FindBy(xpath="//input[@class=\"admin__control-text data-grid-search-control\"]")
+	WebElement searchpricelist;
 	
+	@FindBy(xpath="//div[@class=\"data-grid-search-control-wrap\"]//button[@class=\"action-submit\" and @type=\"button\"]")
+	WebElement searchbutton;
+	
+	@FindBy(xpath="//div[contains(text(),'Pricelist')]")
+	WebElement DuplicatePlMessage;
 	
 	
 	//initializing the page object
@@ -78,31 +86,6 @@ public class PriceListPage {
 	
 	
 	//Action 
-		
-		//1st dashboard manue select from left pane
-		public void PLManueSelect() {
-			
-			ManueDashboardButton.click();
-			
-		}
-		
-		//for verify get dashboard title
-		public String PageTile() {
-			
-			return Dashboard.getText();
-		}
-	  
-		//SelectAdvancePricing  from left manue panel
-		public void SelectAdvancePricing() {
-			
-			AdvancePricing.click();
-		}
-		
-		//select sub manue
-        public void SelectPriceList() {
-			
-        	PriceLits.click();
-		}
 		
         
         //again validate price list page title
@@ -191,7 +174,7 @@ public class PriceListPage {
     	
     	public void clicksaveandContinue() {
     		
-    		Save_button.click();
+    		Savecontinue_button.click();
     	} 
     	
     	//Click on product details for assign
@@ -200,6 +183,59 @@ public class PriceListPage {
     		
     		ProductDetails.click();
     	}
+    	
     	// click on reset filter
+    	public void clickresetfilter() {
+    		
+    		ResetFilter.click();
+    	}
+    	//click on check box
+    	
+    	public void checkbox() {
+    		
+    		Checkbox.click();
+    		
+    	}
+    	
+    	//action dropdown selection
+    	
+    	public void ActionDD()
+    	{
+    		Select  ActionDD = new Select(Actiondropdown);
+    		 
+    		
+    		//before select dropdown it should return No
+    		WebElement Action_dd= ActionDD.getFirstSelectedOption();
+    		System.out.println("before selection dropdown values =" +Action_dd.getText());
+    		
+    		ActionDD.selectByVisibleText("Assign");
+    		
+    		//after  select dropdown it should return Yes
+    	    WebElement Action_dd1= ActionDD.getFirstSelectedOption();
+    	    System.out.println("before selection dropdown values =" +Action_dd1.getText());
+    		
+    		
+    		
+    	}
+    	
+    	//Click final save
+    	
+    	public void Save() {
+    		
+    		Save.click();
+    	}
+    	
+        //search pricelist 
+    	public void search() {
+    		searchpricelist.sendKeys("test1");
+    		searchbutton.click();
+    	}
+    	
+    	//for duplicate check message 
+    	
+    	public void Duplicatemessage() {
+    		
+    		DuplicatePlMessage.getText();
+    	}
     	
 }
