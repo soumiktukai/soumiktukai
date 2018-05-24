@@ -1,28 +1,24 @@
 package com.nagento.qa.pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class PriceListPage {
+import com.magento.qa.base.TestBase;
+
+public class PriceListPage extends TestBase {
 	
-	WebDriver driver;
+	//WebDriver driver;
 	
 	
 	//Pagefactory--OR
 	
 	
-	
-	
-	
-	
-	
-	
 	//Pricelist page logo
 	
 	@FindBy(xpath="//h1[@class='page-title' and text()='Manage Pricelist']")
+	//@FindBy(xpath="//div[@class=\"page-title-wrapper\"]//h1[contains(text(),'Manage Pricelist')]")
 	WebElement PriceListPageTitle;
 	
 	
@@ -89,14 +85,17 @@ public class PriceListPage {
 		
         
         //again validate price list page title
-        public String PricelistPageTile() {
+        public  String PricelistPageTile() {
 			
-			return PriceListPageTitle.getText();
+        	return driver.getTitle();
+        	//return PriceListPageTitle.getText();
+				
+	
 		}
 	   
         //CLick on add new price list
         
-        public void AddewPriceList() {
+        public void AddnewPriceList() {
         	
         	AddPriceListButton.click();
         }

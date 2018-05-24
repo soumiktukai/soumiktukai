@@ -29,13 +29,7 @@ public class HomepageTest extends TestBase {
 	
             }
          
-          @BeforeTest
-          
-          public void closepoup() {
-         	 
-         	 Homepage.closepoup();
-                 
-          }
+        
            
          
           
