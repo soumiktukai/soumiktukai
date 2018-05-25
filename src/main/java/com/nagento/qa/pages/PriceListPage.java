@@ -1,11 +1,14 @@
 package com.nagento.qa.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.magento.qa.base.TestBase;
+import com.magento.qa.util.TestUtil;
 
 public class PriceListPage extends TestBase {
 	
@@ -73,6 +76,28 @@ public class PriceListPage extends TestBase {
 	@FindBy(xpath="//div[contains(text(),'Pricelist')]")
 	WebElement DuplicatePlMessage;
 	
+	@FindBy(xpath="//button[@class=\"action-default\" and text()=\"Filters\"]")
+	WebElement Filter;
+	
+	@FindBy(name="pricelist_name")
+	WebElement namesreach_field;
+	
+	
+	//xpath if need ://input[@name="pricelist_name"]
+	
+	
+	@FindBy(xpath="//span[contains(text(),'Apply')]")
+	WebElement Applyfilters;
+	
+	@FindBy(xpath="//a[@class=\"action-menu-item\"]")
+	WebElement Edit;
+	
+	@FindBy(xpath="//span[text()=\"Delete Pricelist Price\"]")
+	WebElement Delete;
+	
+	@FindBy(xpath="//button[@class=\"action-primary action-accept\" and @type=\"button\"]")
+	WebElement popup_confirmation;
+	
 	
 	//initializing the page object
 		public PriceListPage() {
@@ -135,7 +160,7 @@ public class PriceListPage extends TestBase {
     	System.out.println("before selection dropdown values =" +selcted_values.getText());
     	
     	
-    	PricelistDropdownbtn.selectByValue("1");
+    	PricelistDropdownbtn.selectByValue("0");
     	
     	//after select pricelist it should return Automation
     	
@@ -237,4 +262,31 @@ public class PriceListPage extends TestBase {
     		DuplicatePlMessage.getText();
     	}
     	
+    	//filter with name 
+    	
+    	public void filterWith_name() throws InterruptedException {
+    		Thread.sleep(5000);
+    		driver.manage().timeouts().implicitlyWait(TestUtil.Implicit_Wait, TimeUnit.SECONDS);
+    		Filter.click();
+    		Thread.sleep(1000);
+    		namesreach_field.sendKeys("test1");
+    		Thread.sleep(1000);
+    		Applyfilters.click();
+    		Thread.sleep(1000);
+    	}
+    	
+    	//Click on edit 
+    	
+    	public void edit() throws InterruptedException {
+    		Thread.sleep(1000);
+    		Edit.click();
+    		
+    	}
+    	// click on delete 
+    	public void delete() throws InterruptedException {
+    		
+    		Delete.click();
+    		Thread.sleep(1000);
+    		popup_confirmation.click();
+    	}
 }

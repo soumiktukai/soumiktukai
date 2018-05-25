@@ -64,16 +64,16 @@ public class HomePage extends TestBase {
   		}
   		
   	//SelectAdvancePricing  from left manue panel
-  			public PriceListPage SelectAdvancePricing() {
+  			public PriceListPage SelectAdvancePricing() throws InterruptedException {
   				Actions act= new Actions(driver);
-  				
+  				Thread.sleep(1000);
   				act.moveToElement(AdvancePricing).click().perform();
   				driver.manage().timeouts().implicitlyWait(TestUtil.Implicit_Wait, TimeUnit.SECONDS);
   				//reloaddata.click();
   				System.out.println("test1");
   				//AdvancePricing.click();
                 Actions act1= new Actions(driver);
-  				
+                Thread.sleep(1000);
   				act1.moveToElement(PriceLits).click().perform(); 
   				System.out.println("test2");
   				driver.manage().timeouts().implicitlyWait(TestUtil.Implicit_Wait, TimeUnit.SECONDS);

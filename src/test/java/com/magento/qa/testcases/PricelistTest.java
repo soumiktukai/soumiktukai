@@ -28,7 +28,7 @@ public class PricelistTest extends TestBase {
 	  }
 	
 	  @BeforeMethod
-      public void SetUp() {
+      public void SetUp() throws InterruptedException {
 
         initialization();
         loginpage=new AdminLoginPage();
@@ -58,7 +58,7 @@ public class PricelistTest extends TestBase {
 		String title1 =pricelistpage.PricelistPageTile();
 		System.out.println("Finally able to verify");
 		//Assert.assertEquals(title1, "Manage Pricelist");
-		Assert.assertEquals(title1, "Dashboard / Magento Admin");
+		Assert.assertEquals(title1, "Manage Pricelist / Magento Admin");
 		//  System.out.println("faild");
 		 //Assert.assertTrue( pricelistpage.PricelistPageTile());
 		  
@@ -73,7 +73,32 @@ public class PricelistTest extends TestBase {
 		  pricelistpage.AddnewPriceList();
 		   
 		  pricelistpage.WebsiteDD();
+		  
+		  pricelistpage.PriceListName();
+		  
+		  pricelistpage.PriceListDDvalue();
+		  
+		  pricelistpage.discountpercent();
+		  
+		  pricelistpage.IsactiveDDvalue();
+		  
+		  pricelistpage.clicksaveandContinue();
+		  
+		  
 	  }
+	  
+	  @Test(priority=3)
+	  
+	  public void PriceList_Del() throws InterruptedException {
+		  
+		  pricelistpage.filterWith_name();
+		  
+		  pricelistpage.edit();
+		  
+		  pricelistpage.delete();
+		  
+	  }
+	  
 	  
 	  @AfterMethod
       
