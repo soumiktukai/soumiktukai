@@ -87,7 +87,42 @@ public class PricelistTest extends TestBase {
 		  
 	  }
 	  
+	  
+	 /* @Test(priority=3)
+	  
+	  public void assignment() throws InterruptedException {
+		  
+          pricelistpage.filterWith_name();
+		  
+		  pricelistpage.edit();
+		  
+		  
+	  }*/
+	 
+	  
 	  @Test(priority=3)
+	  
+	  public void prod_assign() throws InterruptedException {
+		  
+		  pricelistpage.filterWith_name();
+		  
+		  pricelistpage.edit();
+		  
+		  pricelistpage.product_assign();
+		  
+		  pricelistpage.productassign_action();
+		  
+		  pricelistpage.click_submit();
+		  
+		  String title2 =pricelistpage.verify_message();;
+			System.out.println("verify the message");
+			//Assert.assertEquals(title1, "Manage Pricelist");
+			Assert.assertEquals(title2, "Selected items has been assigned");
+		  
+		  
+	  }
+	  
+ /*@Test(priority=5)
 	  
 	  public void PriceList_Del() throws InterruptedException {
 		  
@@ -97,9 +132,8 @@ public class PricelistTest extends TestBase {
 		  
 		  pricelistpage.delete();
 		  
-	  }
-	  
-	  
+	  }*/
+ 
 	  @AfterMethod
       
       public void teardown() {

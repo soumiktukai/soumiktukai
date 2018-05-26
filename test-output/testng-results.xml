@@ -2,44 +2,44 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60657" started-at="2018-05-25T10:47:37Z" finished-at="2018-05-25T10:48:37Z">
+  <suite name="Default suite" duration-ms="67625" started-at="2018-05-26T13:45:14Z" finished-at="2018-05-26T13:46:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="60657" started-at="2018-05-25T10:47:37Z" finished-at="2018-05-25T10:48:37Z">
+    <test name="Default test" duration-ms="67625" started-at="2018-05-26T13:45:14Z" finished-at="2018-05-26T13:46:21Z">
       <class name="com.magento.qa.testcases.PricelistTest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="SetUp" is-config="true" duration-ms="14310" started-at="2018-05-25T10:47:37Z" finished-at="2018-05-25T10:47:51Z">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="SetUp" is-config="true" duration-ms="14015" started-at="2018-05-26T13:45:14Z" finished-at="2018-05-26T13:45:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="priceList_Title_Validation()[pri:1, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="priceList_Title_Validation" duration-ms="30" started-at="2018-05-25T10:47:51Z" finished-at="2018-05-25T10:47:51Z">
+        <test-method status="PASS" signature="priceList_Title_Validation()[pri:1, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="priceList_Title_Validation" duration-ms="23" started-at="2018-05-26T13:45:28Z" finished-at="2018-05-26T13:45:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- priceList_Title_Validation -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="teardown" is-config="true" duration-ms="707" started-at="2018-05-25T10:47:51Z" finished-at="2018-05-25T10:47:52Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="teardown" is-config="true" duration-ms="719" started-at="2018-05-26T13:45:28Z" finished-at="2018-05-26T13:45:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="SetUp" is-config="true" duration-ms="12238" started-at="2018-05-25T10:47:52Z" finished-at="2018-05-25T10:48:04Z">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="SetUp" is-config="true" duration-ms="13546" started-at="2018-05-26T13:45:28Z" finished-at="2018-05-26T13:45:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="priceList_Add()[pri:2, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="priceList_Add" duration-ms="4065" started-at="2018-05-25T10:48:04Z" finished-at="2018-05-25T10:48:08Z">
+        <test-method status="PASS" signature="priceList_Add()[pri:2, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="priceList_Add" duration-ms="4431" started-at="2018-05-26T13:45:42Z" finished-at="2018-05-26T13:45:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- priceList_Add -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="teardown" is-config="true" duration-ms="705" started-at="2018-05-25T10:48:08Z" finished-at="2018-05-25T10:48:09Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="teardown" is-config="true" duration-ms="709" started-at="2018-05-26T13:45:46Z" finished-at="2018-05-26T13:45:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="SetUp" is-config="true" duration-ms="12799" started-at="2018-05-25T10:48:09Z" finished-at="2018-05-25T10:48:22Z">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="SetUp" is-config="true" duration-ms="12902" started-at="2018-05-26T13:45:47Z" finished-at="2018-05-26T13:46:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="PriceList_Del()[pri:3, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="PriceList_Del" duration-ms="15093" started-at="2018-05-25T10:48:22Z" finished-at="2018-05-25T10:48:37Z">
+        <test-method status="PASS" signature="prod_assign()[pri:3, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="prod_assign" duration-ms="20446" started-at="2018-05-26T13:46:00Z" finished-at="2018-05-26T13:46:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PriceList_Del -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="teardown" is-config="true" duration-ms="684" started-at="2018-05-25T10:48:37Z" finished-at="2018-05-25T10:48:37Z">
+        </test-method> <!-- prod_assign -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.magento.qa.testcases.PricelistTest@b7dd107]" name="teardown" is-config="true" duration-ms="810" started-at="2018-05-26T13:46:20Z" finished-at="2018-05-26T13:46:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

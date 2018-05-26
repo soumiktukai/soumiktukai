@@ -98,7 +98,27 @@ public class PriceListPage extends TestBase {
 	@FindBy(xpath="//button[@class=\"action-primary action-accept\" and @type=\"button\"]")
 	WebElement popup_confirmation;
 	
+	@FindBy(name="test_tab")
+	WebElement product_details;
 	
+	@FindBy(xpath="//button[@class=\"action-default scalable action-reset action-tertiary\" and contains(@title,'Reset') and @type='button']")
+	WebElement reset_filter;
+	
+	@FindBy(xpath="//input[@name=\"product_id\" and @value=\"471\"]")
+	WebElement check_box_product;
+	
+	@FindBy(xpath="//select[@id=\"ProductGrid_massaction-select\" and @class=\"local-validation admin__control-select \"]")
+	WebElement Assign_Dropdown;
+	
+	@FindBy(xpath="//button[@class=\"action-default scalable\" and @title=\"Submit\"]")
+	WebElement click_submit;
+	
+	@FindBy(xpath="//button[@class=\"action-primary action-accept\" and @type=\"button\"]")
+	WebElement confirm_popup;
+	
+	
+	@FindBy(xpath="//div[contains(text(),'Selected items')]")
+	WebElement confirm_message;
 	//initializing the page object
 		public PriceListPage() {
 			
@@ -189,7 +209,7 @@ public class PriceListPage extends TestBase {
     		
     		//after  select dropdown it should return Yes
     	    WebElement selected_DD1= isactiveddbutton.getFirstSelectedOption();
-    	    System.out.println("before selection dropdown values =" +selected_DD1.getText());
+    	    System.out.println("after selection dropdown values =" +selected_DD1.getText());
     		
     		
     		
@@ -288,5 +308,50 @@ public class PriceListPage extends TestBase {
     		Delete.click();
     		Thread.sleep(1000);
     		popup_confirmation.click();
+    	}
+    	
+    	
+    	public void product_assign() throws InterruptedException {
+    		
+    		product_details.click();
+    		Thread.sleep(1000);
+    		reset_filter.click();
+    		Thread.sleep(1000);
+    		check_box_product.click();
+    		Thread.sleep(1000);
+    		
+    	} 
+    	
+    	//product assign dropdown
+    	public void productassign_action() throws InterruptedException {
+            Select  Assign_DD = new Select(Assign_Dropdown);
+    		 
+    		
+    		//before select dropdown it should return No
+    		WebElement Assigndd= Assign_DD.getFirstSelectedOption();
+    		System.out.println("before selection dropdown values =" +Assigndd.getText());
+    		
+    		Assign_DD.selectByVisibleText("Assign");
+    		Thread.sleep(1000);
+    		
+    		//after  select dropdown it should return Yes
+    	    WebElement Assigndd1= Assign_DD.getFirstSelectedOption();
+    	    System.out.println("after selection dropdown values =" +Assigndd1.getText());
+    		
+        }
+    	
+    	public void click_submit() throws InterruptedException {
+    		
+    		Thread.sleep(1000);
+    		click_submit.click();
+    		Thread.sleep(1000);
+    		confirm_popup.click();
+    		
+    	}
+    	
+    	public String verify_message() {
+    		
+    		return confirm_message.getText();
+    		
     	}
 }
