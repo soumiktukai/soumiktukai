@@ -1,17 +1,14 @@
 package com.magento.qa.testcases;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.magento.qa.base.TestBase;
 import com.nagento.qa.pages.AdminLoginPage;
+import com.nagento.qa.pages.CustomerPage;
 import com.nagento.qa.pages.HomePage;
 import com.nagento.qa.pages.PriceListPage;
 
@@ -20,6 +17,7 @@ public class PricelistTest extends TestBase {
 	  HomePage Homepage;
 	  PriceListPage pricelistpage;
 	  WebElement element;
+	  CustomerPage Custpage;
 	 // WebDriver driver;
 	  
 	  public PricelistTest() {
@@ -49,7 +47,7 @@ public class PricelistTest extends TestBase {
   	    }
 	  
 
-	  
+	
 	  
 	  @Test(priority=1)
 	  public void priceList_Title_Validation() {
@@ -63,6 +61,8 @@ public class PricelistTest extends TestBase {
 		 //Assert.assertTrue( pricelistpage.PricelistPageTile());
 		  
 		  }
+	 
+	  
 	  
 	  @Test(priority=2)
 	  
@@ -88,6 +88,7 @@ public class PricelistTest extends TestBase {
 	  }
 	  
 	  
+	  
 	 /* @Test(priority=3)
 	  
 	  public void assignment() throws InterruptedException {
@@ -99,10 +100,12 @@ public class PricelistTest extends TestBase {
 		  
 	  }*/
 	 
-	  
+	 
 	  @Test(priority=3)
 	  
 	  public void prod_assign() throws InterruptedException {
+		  
+		  pricelistpage.clr_filter();
 		  
 		  pricelistpage.filterWith_name();
 		  
@@ -114,17 +117,62 @@ public class PricelistTest extends TestBase {
 		  
 		  pricelistpage.click_submit();
 		  
-		  String title2 =pricelistpage.verify_message();;
-			System.out.println("verify the message");
+		  
+		  boolean title2 =pricelistpage.verify_message();
+		 
+		  if(title2==true) {
+			System.out.println("verified the message");
 			//Assert.assertEquals(title1, "Manage Pricelist");
-			Assert.assertEquals(title2, "Selected items has been assigned");
+			//Assert.assertEquals(title2, "Selected items has been assigned");
+		  }
+		  else{
+			   System.out.println("element not present -- so it entered the else loop");
+
+			}
+		  
+		  
+	  }
+	 
+	  
+	 
+	  
+	  @Test(priority=4)
+	  
+	  public void pricelisAssign_customer() throws InterruptedException{
+		  
+		  //local object creation of CustomerPage class
+		  CustomerPage Custpage =new CustomerPage();
+		  
+		  //open customer page from left pane 
+		  Homepage.selectcustomeroption();
+		  
+		  //page title verification
+		  String title3 =Custpage.CustomerPageTile();
+		  System.out.println("verify the message");
+		  //Assert.assertEquals(title1, "Manage Pricelist");
+		  Assert.assertEquals(title3, "Customers / Customers / Magento Admin");
+		  
+		  Custpage.filter_customer();
+		  
+		  Custpage.Pricelist_DD();
+		  
+		  Custpage.save();
+		  
+		  
 		  
 		  
 	  }
 	  
- /*@Test(priority=5)
+	  
+	  
+	  
+	  
+	  
+    @Test(priority=5)
 	  
 	  public void PriceList_Del() throws InterruptedException {
+	 
+	      pricelistpage.clr_filter();
 		  
 		  pricelistpage.filterWith_name();
 		  
@@ -132,7 +180,8 @@ public class PricelistTest extends TestBase {
 		  
 		  pricelistpage.delete();
 		  
-	  }*/
+		  pricelistpage.clr_filter();
+	  }
  
 	  @AfterMethod
       

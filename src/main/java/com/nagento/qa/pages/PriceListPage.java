@@ -119,6 +119,12 @@ public class PriceListPage extends TestBase {
 	
 	@FindBy(xpath="//div[contains(text(),'Selected items')]")
 	WebElement confirm_message;
+	
+	@FindBy(xpath="//button[@class=\"action-remove\"]")
+	WebElement clear_filter;
+	
+	
+	
 	//initializing the page object
 		public PriceListPage() {
 			
@@ -256,7 +262,7 @@ public class PriceListPage extends TestBase {
     		
     		//after  select dropdown it should return Yes
     	    WebElement Action_dd1= ActionDD.getFirstSelectedOption();
-    	    System.out.println("before selection dropdown values =" +Action_dd1.getText());
+    	    System.out.println("after selection dropdown values =" +Action_dd1.getText());
     		
     		
     		
@@ -335,8 +341,8 @@ public class PriceListPage extends TestBase {
     		Thread.sleep(1000);
     		
     		//after  select dropdown it should return Yes
-    	    WebElement Assigndd1= Assign_DD.getFirstSelectedOption();
-    	    System.out.println("after selection dropdown values =" +Assigndd1.getText());
+    	    //WebElement Assigndd1= Assign_DD.getFirstSelectedOption();
+    	   // System.out.println("after selection dropdown values =" +Assigndd1.getText());
     		
         }
     	
@@ -349,9 +355,39 @@ public class PriceListPage extends TestBase {
     		
     	}
     	
-    	public String verify_message() {
+    	
     		
-    		return confirm_message.getText();
+    	
+    	
+    	public boolean verify_message() {
+            try {
+            	confirm_message.getText();
+            } catch (Exception e) {
+                System.out.println("text is not matched ");
+                return false;
+            }
+
+            return true;
+        }
+
+
+    	
+    	
+    	
+    	
+
+
+		public void clr_filter() throws InterruptedException {
+    		
+    		Thread.sleep(5000);
+    		clear_filter.click();
+    		Thread.sleep(1000);
+    	}
+    	
+    	
+    	public void customer_tab() {
+    		
     		
     	}
+    	
 }

@@ -33,11 +33,23 @@ public class HomePage extends TestBase {
 	@FindBy(xpath="//h1[@class='page-title']")
 	WebElement Dashboard;
 	
+	//price list page open
+
 	@FindBy(xpath="//li[@id='menu-insync-pricelist-advanced-pricing']")
 	WebElement AdvancePricing;
 	
 	@FindBy(xpath="//li[@class='item-pricelist-manage    level-1']/a")
 	WebElement PriceLits;
+	
+	
+	//customer page open
+	
+	
+	@FindBy(xpath="//li[@class=\"item-customer  parent  level-0\"and @id=\"menu-magento-customer-customer\"]")
+	WebElement customers_tab;
+	
+	@FindBy(xpath="//li[@class=\"item-customer-manage    level-1\"]")
+	WebElement allcustomer;
 	
     public  HomePage() {
     	
@@ -81,6 +93,19 @@ public class HomePage extends TestBase {
   				return new PriceListPage();
   			}
    //Also go to product page from here like before
+  			
+  			//goto customer page 
+  			
+  			public CustomerPage selectcustomeroption() throws InterruptedException {
+  				
+  				Actions act2= new Actions(driver);
+  				Thread.sleep(5000);
+  				act2.moveToElement(customers_tab).click().perform();
+  				Actions act3= new Actions(driver);
+  				Thread.sleep(1000);
+  				act3.moveToElement(allcustomer).click().perform();
+  				return new CustomerPage();
+  			}
   			
 
 }
