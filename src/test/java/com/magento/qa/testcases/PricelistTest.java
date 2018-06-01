@@ -48,7 +48,7 @@ public class PricelistTest extends TestBase {
 	  
 
 	
-	  
+	 /* 
 	  @Test(priority=1)
 	  public void priceList_Title_Validation() {
 		  
@@ -61,7 +61,7 @@ public class PricelistTest extends TestBase {
 		 //Assert.assertTrue( pricelistpage.PricelistPageTile());
 		  
 		  }
-	 
+	*/ 
 	  
 	  
 	  @Test(priority=2)
@@ -85,6 +85,20 @@ public class PricelistTest extends TestBase {
 		  pricelistpage.clicksaveandContinue();
 		  
 		  
+		  boolean title4 =pricelistpage.ProdCreation_confirm_message();
+		 
+		  if(title4==true) {
+			System.out.println("verified the message");
+			//Assert.assertEquals(title1, "Manage Pricelist");
+			//Assert.assertEquals(title4, "The pricelist has been saved.");
+		  }
+		  else{
+			   System.out.println("Item already created, please delete previous one");
+
+			}
+		  
+		  
+		  
 	  }
 	  
 	  
@@ -99,8 +113,8 @@ public class PricelistTest extends TestBase {
 		  
 		  
 	  }*/
-	 
-	 
+	
+ /*
 	  @Test(priority=3)
 	  
 	  public void prod_assign() throws InterruptedException {
@@ -132,11 +146,11 @@ public class PricelistTest extends TestBase {
 		  
 		  
 	  }
-	 
+
 	  
-	 
+	*/ 
 	  
-	  @Test(priority=4)
+	/*  @Test(priority=4)
 	  
 	  public void pricelisAssign_customer() throws InterruptedException{
 		  
@@ -152,6 +166,21 @@ public class PricelistTest extends TestBase {
 		  //Assert.assertEquals(title1, "Manage Pricelist");
 		  Assert.assertEquals(title3, "Customers / Customers / Magento Admin");
 		  
+		  boolean title = Custpage.availability_clear();
+		  
+		  if(title==true) {
+				System.out.println("clear the filter");
+				  Custpage.clear();
+				//Assert.assertEquals(title1, "Manage Pricelist");
+				//Assert.assertEquals(title2, "Selected items has been assigned");
+			  }
+			  else{
+				   System.out.println("nothing left to clear ");
+
+				}
+		  
+		//  Custpage.clear();
+		  
 		  Custpage.filter_customer();
 		  
 		  Custpage.Pricelist_DD();
@@ -164,9 +193,9 @@ public class PricelistTest extends TestBase {
 	  }
 	  
 	  
-	  
-	  
-	  
+	*/  
+	
+	 /*
 	  
     @Test(priority=5)
 	  
@@ -182,7 +211,7 @@ public class PricelistTest extends TestBase {
 		  
 		  pricelistpage.clr_filter();
 	  }
- 
+*/
 	  @AfterMethod
       
       public void teardown() {

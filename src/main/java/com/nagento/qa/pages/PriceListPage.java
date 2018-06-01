@@ -124,6 +124,8 @@ public class PriceListPage extends TestBase {
 	WebElement clear_filter;
 	
 	
+	@FindBy(xpath="//div[text()=\"The pricelist has been saved.\"]")
+	WebElement save_confirm_message;
 	
 	//initializing the page object
 		public PriceListPage() {
@@ -312,7 +314,7 @@ public class PriceListPage extends TestBase {
     	public void delete() throws InterruptedException {
     		
     		Delete.click();
-    		Thread.sleep(1000);
+    		Thread.sleep(2000);
     		popup_confirmation.click();
     	}
     	
@@ -370,9 +372,19 @@ public class PriceListPage extends TestBase {
             return true;
         }
 
+    	
+    	
+    	public boolean ProdCreation_confirm_message() {
+            try {
+            	save_confirm_message.getText();
+            } catch (Exception e) {
+                System.out.println("text is not matched ");
+                return false;
+            }
 
-    	
-    	
+            return true;
+        }
+
     	
     	
 

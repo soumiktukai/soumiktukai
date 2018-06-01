@@ -6,7 +6,7 @@
       <class name="com.magento.qa.testcases.PricelistTest">
         <methods>
           <include name="SetUp"/>
-          <include name="pricelisAssign_customer"/>
+          <include name="priceList_Add"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.magento.qa.testcases.PricelistTest -->

@@ -32,6 +32,10 @@ public class CustomerPage extends TestBase {
 	@FindBy(xpath="//span[text()=\"Save and Continue Edit\"]")
 	WebElement save;
 	
+	
+	@FindBy(xpath="//div[@class=\"admin__data-grid-header\"]/div/div[4]/div[2]//button[@class=\"action-remove\"]")
+	WebElement clear;
+	
 	public CustomerPage() {
 		
 		PageFactory.initElements(driver, this);
@@ -53,7 +57,7 @@ public class CustomerPage extends TestBase {
 		 apply_customer_filter.click();
 		 Thread.sleep(1000);
 		 customer_edit.click();
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 account_information.click();
 		 
 	 }
@@ -81,4 +85,23 @@ public class CustomerPage extends TestBase {
 		 save.click();
 	 }
 	
+	 public void clear() throws InterruptedException {
+		 Thread.sleep(5000);
+		 clear.click();
+		 Thread.sleep(2000);
+	 }
+	 
+
+ 	public boolean availability_clear() {
+         try {
+        	 clear.equals(null);
+         } catch (Exception e) {
+             System.out.println("nothing to clear ");
+             return false;
+         }
+
+         return true;
+     }
+	 
+	 
 }
