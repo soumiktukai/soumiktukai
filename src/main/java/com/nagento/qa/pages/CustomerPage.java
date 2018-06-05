@@ -55,7 +55,7 @@ public class CustomerPage extends TestBase {
 		 email_field.sendKeys("insync@yopmail.com");
 		 Thread.sleep(1000);
 		 apply_customer_filter.click();
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 customer_edit.click();
 		 Thread.sleep(2000);
 		 account_information.click();

@@ -48,7 +48,7 @@ public class PricelistTest extends TestBase {
 	  
 
 	
-	 /* 
+	 
 	  @Test(priority=1)
 	  public void priceList_Title_Validation() {
 		  
@@ -61,7 +61,7 @@ public class PricelistTest extends TestBase {
 		 //Assert.assertTrue( pricelistpage.PricelistPageTile());
 		  
 		  }
-	*/ 
+	 
 	  
 	  
 	  @Test(priority=2)
@@ -114,7 +114,7 @@ public class PricelistTest extends TestBase {
 		  
 	  }*/
 	
- /*
+
 	  @Test(priority=3)
 	  
 	  public void prod_assign() throws InterruptedException {
@@ -148,9 +148,9 @@ public class PricelistTest extends TestBase {
 	  }
 
 	  
-	*/ 
+	
 	  
-	/*  @Test(priority=4)
+	  @Test(priority=4)
 	  
 	  public void pricelisAssign_customer() throws InterruptedException{
 		  
@@ -193,9 +193,9 @@ public class PricelistTest extends TestBase {
 	  }
 	  
 	  
-	*/  
+	  
 	
-	 /*
+/*	
 	  
     @Test(priority=5)
 	  

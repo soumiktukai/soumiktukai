@@ -61,6 +61,6 @@ public static Properties prop;
 		driver.manage().timeouts().implicitlyWait(TestUtil.Implicit_Wait, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("url"));
-		
+		//driver.get(prop.getProperty("url1"));
 	}
 }

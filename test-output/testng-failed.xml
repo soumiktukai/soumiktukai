@@ -5,8 +5,11 @@
     <classes>
       <class name="com.magento.qa.testcases.PricelistTest">
         <methods>
+          <include name="prod_assign"/>
           <include name="SetUp"/>
+          <include name="pricelisAssign_customer"/>
           <include name="priceList_Add"/>
+          <include name="priceList_Title_Validation"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.magento.qa.testcases.PricelistTest -->
