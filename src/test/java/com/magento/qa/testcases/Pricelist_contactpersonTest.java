@@ -60,7 +60,7 @@ public class Pricelist_contactpersonTest extends TestBase {
 		*/
 		@Test(priority=3)
 		
-		public void Logintest() throws InterruptedException {
+		public void prodpricetest() throws InterruptedException {
 			
 			Contactlogin.signin_contactperson();
 			Contactdashboardpage= Contactlogin.contact_person(prop.getProperty("Con_username"), prop.getProperty("Con_passwrd"));

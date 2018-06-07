@@ -36,6 +36,12 @@ public class CustomerPage extends TestBase {
 	@FindBy(xpath="//div[@class=\"admin__data-grid-header\"]/div/div[4]/div[2]//button[@class=\"action-remove\"]")
 	WebElement clear;
 	
+	
+	@FindBy(xpath="//div[text()=\"You saved the customer.\"]")
+	WebElement validate_message;
+	
+	
+	
 	public CustomerPage() {
 		
 		PageFactory.initElements(driver, this);
@@ -83,6 +89,8 @@ public class CustomerPage extends TestBase {
 	 public void save() throws InterruptedException {
 		 Thread.sleep(1000);
 		 save.click();
+		 Thread.sleep(3000);
+		 System.out.println("value  saved ");
 	 }
 	
 	 public void clear() throws InterruptedException {
@@ -103,5 +111,20 @@ public class CustomerPage extends TestBase {
          return true;
      }
 	 
+ 	
+ 	
+ 	public boolean validate_message() {
+        try {
+        	validate_message.getText();
+        } catch (Exception e) {
+            System.out.println("text is not matched ");
+            return false;
+        }
+
+        return true;
+    }
+
+	
+
 	 
 }

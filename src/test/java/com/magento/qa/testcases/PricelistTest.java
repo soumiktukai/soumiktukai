@@ -48,7 +48,7 @@ public class PricelistTest extends TestBase {
 	  
 
 	
-	 
+	/* 
 	  @Test(priority=1)
 	  public void priceList_Title_Validation() {
 		  
@@ -101,7 +101,7 @@ public class PricelistTest extends TestBase {
 		  
 	  }
 	  
-	  
+	*/  
 	  
 	 /* @Test(priority=3)
 	  
@@ -114,7 +114,7 @@ public class PricelistTest extends TestBase {
 		  
 	  }*/
 	
-
+/*
 	  @Test(priority=3)
 	  
 	  public void prod_assign() throws InterruptedException {
@@ -148,7 +148,7 @@ public class PricelistTest extends TestBase {
 	  }
 
 	  
-	
+	*/
 	  
 	  @Test(priority=4)
 	  
@@ -186,6 +186,19 @@ public class PricelistTest extends TestBase {
 		  Custpage.Pricelist_DD();
 		  
 		  Custpage.save();
+		  
+		  boolean title4 =Custpage.validate_message();
+			 
+		  if(title4==true) {
+			System.out.println("verified the message");
+			//Assert.assertEquals(title1, "Manage Pricelist");
+			//Assert.assertEquals(title2, "Selected items has been assigned");
+		  }
+		  else{
+			   System.out.println("element not present -- so it entered the else loop");
+
+			}
+		  
 		  
 		  
 		  
